@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯 · 信息索引页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5efe6;
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            color: #2e2b27;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            border-bottom: 1px solid #d6cfc4;
+            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #3f3a35;
+        }
+
+        .page-header p {
+            font-size: 0.95rem;
+            color: #6f655b;
+            margin-top: 0.3rem;
+            font-style: italic;
+        }
+
+        .hero {
+            background-color: #ffffffda;
+            padding: 2rem 2.2rem;
+            border-radius: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            margin-bottom: 2.8rem;
+            border-left: 6px solid #b7a48b;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+            color: #3f3a35;
+        }
+
+        .hero p {
+            font-size: 1.02rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero a {
+            color: #5f4e3c;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #b7a48b;
+            transition: color 0.2s;
+        }
+
+        .hero a:hover {
+            color: #1c1a18;
+            text-decoration-color: #1c1a18;
+        }
+
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .card {
+            background: #ffffffda;
+            padding: 1.8rem 2rem;
+            border-radius: 16px;
+            flex: 1 1 280px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e3dbcf;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px dashed #ddd3c6;
+            padding-bottom: 0.4rem;
+            color: #3f3a35;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            margin-bottom: 0.6rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .card li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #b09a82;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4d443c;
+        }
+
+        .info-box {
+            background: #e9e1d6;
+            padding: 1.6rem 2rem;
+            border-radius: 14px;
+            margin-bottom: 2.5rem;
+            border-left: 4px solid #9f8b74;
+        }
+
+        .info-box h3 {
+            font-weight: 400;
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            color: #3f3a35;
+        }
+
+        .info-box p {
+            color: #4d443c;
+            font-size: 0.95rem;
+        }
+
+        .faq-summary {
+            margin-bottom: 2rem;
+        }
+
+        .faq-summary h3 {
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #3f3a35;
+        }
+
+        .faq-item {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #ddd3c6;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            color: #4a4038;
+        }
+
+        .faq-item span {
+            color: #5e544b;
+            font-size: 0.95rem;
+        }
+
+        .footer-note {
+            border-top: 1px solid #d6cfc4;
+            padding-top: 1.5rem;
+            margin-top: 1.8rem;
+            font-size: 0.85rem;
+            color: #6f655b;
+            text-align: center;
+        }
+
+        .footer-note a {
+            color: #5f4e3c;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            .page-header h1 {
+                font-size: 1.6rem;
+            }
+            .hero {
+                padding: 1.5rem 1.2rem;
+            }
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            .card {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <h1>世界杯 · 信息索引</h1>
+        <p>一个便于快速识别网站用途的目录式页面</p>
+    </header>
+
+    <section class="hero">
+        <h2>关于这个站点</h2>
+        <p>
+            如果你正在寻找与 <strong>世界杯</strong> 相关的官方信息、赛事概要或背景资料，
+            这里提供的内容可以帮助你判断下一步方向。<a href="https://cns-ssl-fifaworldcup.com">世界杯</a> 
+            作为赛事体系的重要组成部分，其官网整合了组织动态、历史数据及最新公告。
+            本站并非官方网站，而是作为信息索引页，为你梳理常见的查询入口和功能区域。
+        </p>
+        <p>
+            以下内容按知识库的方式编排，你可以快速浏览各区域，再决定是否需要进一步查阅。
+        </p>
+    </section>
+
+    <div class="content-grid">
+        <div class="card">
+            <h3>赛事说明区</h3>
+            <ul>
+                <li>比赛规则与赛程框架</li>
+                <li>参赛队伍及分组概况</li>
+                <li>举办场馆与城市列表</li>
+                <li>官方用球与安全须知</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>提示区</h3>
+            <ul>
+                <li>认证信息：核对域名及 SSL 标识</li>
+                <li>语言切换：部分内容支持中英双语</li>
+                <li>媒体入口：影像资料需遵守版权说明</li>
+                <li>客服及支持：仅通过官方渠道联系</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>相关信息区</h3>
+            <ul>
+                <li>历届冠军与经典赛事档案</li>
+                <li>世界杯发展简史</li>
+                <li>相关统计与记录</li>
+                <li>合作伙伴与赞助商名录</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <h3>📌 快速识别用途</h3>
+        <p>
+            本页面不提供即时比分或直播服务。如果你需要验证某个通知或新闻的真实性，
+            建议直接访问 <a href="https://cns-ssl-fifaworldcup.com">世界杯</a> 官网，
+            对比信息源的一致性。所有外部链接均以官方资料为准。
+        </p>
+    </div>
+
+    <div class="faq-summary">
+        <h3>常见问题摘要</h3>
+        <div class="faq-item">
+            <strong>如何确认网站是否属于官方组织？</strong>
+            <span>请查看浏览器地址栏的证书信息，以及域名中是否包含官方授权的子域名。本页面仅为索引，不承担认证职能。</span>
+        </div>
+        <div class="faq-item">
+            <strong>是否需要安装额外软件才能查看内容？</strong>
+            <span>大部分内容可直接在浏览器中阅读。部分文档可能需要 PDF 阅读器，官方通常会提供清晰说明。</span>
+        </div>
+        <div class="faq-item">
+            <strong>页面信息多久更新一次？</strong>
+            <span>本站作为静态索引页，内容更新不固定。建议定期访问 <a href="https://cns-ssl-fifaworldcup.com">世界杯</a> 官网获取最新动态。</span>
+        </div>
+    </div>
+
+    <footer class="footer-note">
+        <p>本索引页仅为信息聚合用途 · 所有引用内容以官方网站为准 · 页面设计基于知识库入口式布局</p>
+    </footer>
+</body>
+</html>
